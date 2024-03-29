@@ -1,9 +1,13 @@
 
 span{
     color: rgb(0, 0, 0);
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    text-align: right;
     
     
 }
+
+
 body{
     background-color: rgb(255, 255, 255);
     
@@ -27,6 +31,7 @@ width: 350px;
 height: 25px;
 color: white;
 border-radius: 15px;
+margin: 5px;
 }
 #second{
     display: inline-block;
@@ -36,6 +41,7 @@ width: 350px;
 height: 25px;
 color: white;
 border-radius: 15px;
+margin: 5px;
 }
 #third{
     display: inline-block;
@@ -45,6 +51,7 @@ width: 350px;
 height: 25px;
 color: white;
 border-radius: 15px;
+margin: 5px;
 }
 #footer{
     text-align: center;
@@ -56,3 +63,6 @@ border-radius: 15px;
     color: grey;
 }
 
+main a:visited{
+    color: white;
+}
