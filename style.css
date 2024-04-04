@@ -1,68 +1,88 @@
-
-span{
-    color: rgb(0, 0, 0);
-    font-family: "Baloo Bhaijaan 2", sans-serif;
-    text-align: right;
-    
-    
+*{
+    padding: 0;
+    margin: 0;
 }
 
 
-body{
-    background-color: rgb(255, 255, 255);
+
+nav ul li{
+list-style: none;
+/*padding-left: 50px;*/
+font-weight: 700;
+padding-right: 50px;
+
+}
+.parent{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 10px;
+    height: 95vh;
+    width: 95vw;
+    position: absolute;
+    left: 5px;
     
+
     
 }
-html{
-    border-style: solid;
-    padding: 40px;
+ul{
+    display: flex;
+justify-content: right;
+}
+.class{
+    display:inline-block;
+
+   text-align: center;
+    border: 3px solid black;
     border-radius: 15px;
-    border-spacing: 30px;
+    padding: 40px;
+    margin: 20px;
+    width: 350px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    
+    
+
+
+}
+.class1{
+    background-color: rgb(216, 214, 214);
+    font-weight: 700;
+    position: relative;
+    top: 36px;
+    left: 487px;
+
     
 }
-main{
-    text-align: center;
+.class2{
+    background-color: rgb(0, 0, 0);
+    font-weight: 700;
+    color: white;
+    position: relative;
+    top: 36px;
+    left: 487px;
+    
 }
-#first{
-display: inline-block;
-background-color: grey;
-padding: 30px;
-width: 350px;
-height: 25px;
-color: white;
-border-radius: 15px;
-margin: 5px;
+.class3{
+    background-color: rgba(255, 255, 0, 0.83);
+    font-weight: 700;
+    position: relative;
+    top: 36px;
+    left: 487px;
+    
 }
-#second{
-    display: inline-block;
-background-color: black;
-padding: 30px;
-width: 350px;
-height: 25px;
-color: white;
-border-radius: 15px;
-margin: 5px;
+span{
+    justify-content: center;
+    color: rgb(134, 126, 126);position: relative;
+    top: 25px;
+    left: 487px;
 }
-#third{
-    display: inline-block;
-background-color:rgb(238, 238, 4);
-padding: 30px;
-width: 350px;
-height: 25px;
-color: white;
-border-radius: 15px;
-margin: 5px;
-}
-#footer{
-    text-align: center;
-    color: gray;
-}
-
-#foot{
-    text-align:left;
+footer{
     color: grey;
+    
+    position: relative;
+    top:  130px;
+    
 }
-
-main a:visited{
+.class1 a:visited{
     color: white;
 }
