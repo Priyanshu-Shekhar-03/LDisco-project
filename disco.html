@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .container {
+            height: 100vh;
+            width: 50vw;
+            border: 2px solid black; /* Add border around the container */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            text-align: center;
+        }
+        #file-input {
+            display: none;
+        }
+        #upload-button {
+            padding: 20px 200px;
+            font-size: 50px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            position: absolute; /* Positioning relative to the container */
+            top: 50%; /* Position 50% from the top of the container */
+            left: 50%; /* Position 50% from the left of the container */
+            transform: translate(-50%, -50%); /* Center the button */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container to add border -->
+        <form id="upload-form" enctype="multipart/form-data" action="/upload" method="post">
+            <input type="file" id="file-input" name="file" accept=".pdf" onchange="handleFileSelect(event)">
+            <label for="file-input" id="upload-button">
+                <a href="unit 1 computer.pdf">BCE1</a><br>
+                <a href="basic-computer-engineering-2022.pdf">BCE</a>
+            </label>
+        </form>
+    </div>
+
+    <script>
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Submit the form when a file is selected
+                document.getElementById("upload-form").submit();
+            }
+        }
+    </script>
+</body>
+</html>
