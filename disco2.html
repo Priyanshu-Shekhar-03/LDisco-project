@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study with AI</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            overflow: hidden; /* Hide overflow to prevent scrollbar */
+        }
+        .container {
+            position: relative; /* Relative positioning for the container */
+            width: 90vw; /* 90% of viewport width */
+            height: 50vh;
+            max-width: 600px; /* Set a maximum width */
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black; /* Thin black border */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Hide overflow to prevent panda overflow */
+        }
+        .faded-text {
+            color: rgba(0, 0, 0, 0.5); /* Faded color */
+            position: relative; /* Position relative for text container */
+            z-index: 1; /* Ensure text is above panda */
+        }
+        .panda-container {
+            position: absolute; /* Absolute positioning for the panda container */
+            top: 30%; /* Position the panda above the text */
+            left: 50%; /* Center the panda horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            z-index: 0; /* Ensure panda is behind text */
+            border-radius: 70%; /* Round shape for panda container */
+            overflow: hidden; /* Hide overflow to prevent panda overflow */
+        }
+        .panda {
+            width: 300px; /* Adjust panda width */
+            height: auto; /* Maintain aspect ratio */
+            position: relative; /* Relative positioning for the panda */
+            top: -30px; /* Adjust vertical position for centering */
+            animation: pandaMove 10s linear infinite; /* Animation for the panda movement */
+        }
+        @keyframes pandaMove {
+            0% {
+                transform: translateX(-50px) rotate(-10deg); /* Start position of the panda */
+            }
+            100% {
+                transform: translateX(50px) rotate(10deg); /* End position of the panda */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="faded-text">
+            <p>This feature is still in developmental phase. Keep visiting for latest updates.</p>
+        </div>
+        <!-- Panda container -->
+        <div class="panda-container">
+            <!-- Panda image -->
+            <img class="panda" src="{{ url_for('static', filename='images/panda.png') }}" alt="Panda">
+        </div>
+    </div>
+</body>
+</html>
